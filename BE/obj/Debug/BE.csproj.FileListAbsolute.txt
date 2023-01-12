@@ -1,0 +1,6 @@
+D:\Users\Eze\source\repos\1XBet\BE\bin\Debug\BE.dll
+D:\Users\Eze\source\repos\1XBet\BE\bin\Debug\BE.pdb
+D:\Users\Eze\source\repos\1XBet\BE\obj\Debug\BE.csproj.AssemblyReference.cache
+D:\Users\Eze\source\repos\1XBet\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+D:\Users\Eze\source\repos\1XBet\BE\obj\Debug\BE.dll
+D:\Users\Eze\source\repos\1XBet\BE\obj\Debug\BE.pdb

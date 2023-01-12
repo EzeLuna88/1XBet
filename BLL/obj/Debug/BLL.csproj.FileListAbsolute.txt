@@ -1,0 +1,13 @@
+D:\Users\Eze\source\repos\1XBet\BLL\bin\Debug\BLL.dll
+D:\Users\Eze\source\repos\1XBet\BLL\bin\Debug\BLL.pdb
+D:\Users\Eze\source\repos\1XBet\BLL\bin\Debug\BE.dll
+D:\Users\Eze\source\repos\1XBet\BLL\bin\Debug\MPP.dll
+D:\Users\Eze\source\repos\1XBet\BLL\bin\Debug\DAL.dll
+D:\Users\Eze\source\repos\1XBet\BLL\bin\Debug\BE.pdb
+D:\Users\Eze\source\repos\1XBet\BLL\bin\Debug\MPP.pdb
+D:\Users\Eze\source\repos\1XBet\BLL\bin\Debug\DAL.pdb
+D:\Users\Eze\source\repos\1XBet\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Users\Eze\source\repos\1XBet\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Users\Eze\source\repos\1XBet\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Users\Eze\source\repos\1XBet\BLL\obj\Debug\BLL.dll
+D:\Users\Eze\source\repos\1XBet\BLL\obj\Debug\BLL.pdb

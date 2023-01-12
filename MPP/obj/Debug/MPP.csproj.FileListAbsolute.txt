@@ -1,0 +1,11 @@
+D:\Users\Eze\source\repos\1XBet\MPP\bin\Debug\MPP.dll
+D:\Users\Eze\source\repos\1XBet\MPP\bin\Debug\MPP.pdb
+D:\Users\Eze\source\repos\1XBet\MPP\bin\Debug\BE.dll
+D:\Users\Eze\source\repos\1XBet\MPP\bin\Debug\DAL.dll
+D:\Users\Eze\source\repos\1XBet\MPP\bin\Debug\BE.pdb
+D:\Users\Eze\source\repos\1XBet\MPP\bin\Debug\DAL.pdb
+D:\Users\Eze\source\repos\1XBet\MPP\obj\Debug\MPP.csproj.AssemblyReference.cache
+D:\Users\Eze\source\repos\1XBet\MPP\obj\Debug\MPP.csproj.CoreCompileInputs.cache
+D:\Users\Eze\source\repos\1XBet\MPP\obj\Debug\MPP.csproj.CopyComplete
+D:\Users\Eze\source\repos\1XBet\MPP\obj\Debug\MPP.dll
+D:\Users\Eze\source\repos\1XBet\MPP\obj\Debug\MPP.pdb
