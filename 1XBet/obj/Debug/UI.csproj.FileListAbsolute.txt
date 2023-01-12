@@ -25,3 +25,4 @@ D:\Users\Eze\source\repos\1XBet\1XBet\obj\Debug\_1XBet.EquipoAlta.resources
 D:\Users\Eze\source\repos\1XBet\1XBet\obj\Debug\_1XBet.Partido.resources
 D:\Users\Eze\source\repos\1XBet\1XBet\obj\Debug\_1XBet.Informes.resources
 D:\Users\Eze\source\repos\1XBet\1XBet\obj\Debug\_1XBet.EquipoVsEquipo.resources
+D:\Users\Eze\source\repos\1XBet\1XBet\obj\Debug\_1XBet.ProximosPartidos.resources
