@@ -191,32 +191,43 @@ namespace _1XBet
 
         private void comboBoxEquipoLocal_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            BEEquipo equipo = (BEEquipo)comboBoxEquipoLocal.SelectedItem;
             int local = bllPartido.Local(beLiga);
             int empate = bllPartido.Empate(beLiga);
             int visitante = bllPartido.Visitante(beLiga);
             int aASi = bllPartido.AmbosAnotanSi(beLiga);
             int aANo = bllPartido.AmbosAnotanNo(beLiga);
-
-            
-
             int dosPuntoCingoGolesSi = bllPartido.MasDeDosPuntoCincoGolesSi(beLiga);
             int dosPuntoCingoGolesNo = bllPartido.MasDeDosPuntoCincoGolesNo(beLiga);
+            int localVictorias = bllEquipo.EquipoLocalVictorias(equipo);
+            int localDerrotas = bllEquipo.EquipoLocalDerrotas(equipo);
+            int localUltimasVictorias= bllEquipo.EquipoLocalUltimasVictorias(equipo);
+            int localUltimasDerrotas = bllEquipo.EquipoLocalUltimasDerrotas(equipo);
+            int localEmpates = bllEquipo.EquipoLocalEmpates(equipo);
+            int localUltimosEmpates = bllEquipo.EquipoLocalUltimosEmpates(equipo);
+            int localAASi = bllEquipo.AmbosAnotanSi(equipo);
+            int localUltimosAASi = bllEquipo.AmbosAnotanSiUltimos(equipo);
+            int localAANo = bllEquipo.AmbosAnotanNo(equipo);
+            int localUltimosAANo = bllEquipo.AmbosAnotanNoUltimos(equipo);
+            int local25GolesSi = bllEquipo.MasDeDosPuntoCincoGolesSi(equipo);
+            int localUltimos25GolesSi = bllEquipo.MasDeDosPuntoCincoGolesSiUltimos(equipo);
+            int local25GolesNo = bllEquipo.MasDeDosPuntoCincoGolesNo(equipo);
+            int localUltimos25GolesNo = bllEquipo.MasDeDosPuntoCincoGolesNoUltimos(equipo);
 
-            BEEquipo equipo = (BEEquipo)comboBoxEquipoLocal.SelectedItem;
-            
+
             switch (indicadorLEV)
             {
                 case 1:
-                    textBoxLocalLEV.Text = (bllEquipo.EquipoLocalVictorias(equipo) + bllEquipo.EquipoLocalDerrotas(equipo)).ToString();
-                    textBoxLocalLEVUltimos.Text = (bllEquipo.EquipoLocalUltimasVictorias(equipo) + bllEquipo.EquipoLocalUltimasDerrotas(equipo)).ToString();
-
+                    textBoxLocalLEV.Text = (localVictorias + localDerrotas).ToString();
+                    textBoxLocalLEVUltimos.Text = (localUltimasVictorias + localUltimasDerrotas).ToString();
                     break;
                 case 2:
-                    textBoxLocalLEV.Text = (bllEquipo.EquipoLocalVictorias(equipo) + bllEquipo.EquipoLocalEmpates(equipo)).ToString();
+                    textBoxLocalLEV.Text = (localVictorias + localEmpates).ToString();
+                    textBoxLocalLEVUltimos.Text = (localUltimasVictorias + localUltimosEmpates).ToString();
                     break;
                 case 3:
-                    textBoxLocalLEV.Text = (bllEquipo.EquipoLocalEmpates(equipo) + bllEquipo.EquipoLocalDerrotas(equipo)).ToString();
+                    textBoxLocalLEV.Text = (localEmpates + localDerrotas).ToString();
+                    textBoxLocalLEVUltimos.Text = (localUltimosEmpates + localUltimasDerrotas).ToString();
                     break;
                 default:
                     // Código para ejecutar en caso de que no se cumpla ninguno de los casos anteriores
@@ -225,19 +236,32 @@ namespace _1XBet
 
             if (aASi > aANo)
             {
-                textBoxLocalAA.Text = bllEquipo.AmbosAnotanSi(equipo).ToString();
-                textBoxLocal25Goles.Text = bllEquipo.MasDeDosPuntoCincoGolesSi(equipo).ToString();
+                textBoxLocalAA.Text = localAASi.ToString();
+                textBoxLocalAAUltimos.Text = localUltimosAASi.ToString();
             }
             else 
             {
-                textBoxLocalAA.Text = bllEquipo.AmbosAnotanNo(equipo).ToString();
-                    textBoxLocal25Goles.Text = bllEquipo.MasDeDosPuntoCincoGolesNo(equipo).ToString();
+                textBoxLocalAA.Text = localAANo.ToString();
+                textBoxLocalAAUltimos.Text = localUltimosAANo.ToString();
+            }
+            
+            if(dosPuntoCingoGolesSi > dosPuntoCingoGolesNo)
+            { 
+                textBoxLocal25Goles.Text = local25GolesSi.ToString(); 
+                textBoxLocal25GolesUltimos.Text = localUltimos25GolesSi.ToString();
+            }
+            else 
+            { 
+                textBoxLocal25Goles.Text = local25GolesNo.ToString();
+                textBoxLocal25GolesUltimos.Text = localUltimos25GolesNo.ToString();
+
             }
 
         }
 
         private void comboBoxEquipoVisitante_SelectedIndexChanged(object sender, EventArgs e)
         {
+            BEEquipo equipo = (BEEquipo)comboBoxEquipoVisitante.SelectedItem;
             int local = bllPartido.Local(beLiga);
             int empate = bllPartido.Empate(beLiga);
             int visitante = bllPartido.Visitante(beLiga);
@@ -246,17 +270,38 @@ namespace _1XBet
             int dosPuntoCingoGolesSi = bllPartido.MasDeDosPuntoCincoGolesSi(beLiga);
             int dosPuntoCingoGolesNo = bllPartido.MasDeDosPuntoCincoGolesNo(beLiga);
 
-            BEEquipo equipo = (BEEquipo)comboBoxEquipoVisitante.SelectedItem;
+            int victorias = bllEquipo.EquipoVisitanteVictorias(equipo);
+            int derrotas = bllEquipo.EquipoVisitanteDerrotas(equipo);
+            int ultimasVictorias = bllEquipo.EquipoVisitanteUltimasVictorias(equipo);
+            int ultimasDerrotas = bllEquipo.EquipoVisitanteUltimasDerrotas(equipo);
+            int empates = bllEquipo.EquipoVisitanteEmpates(equipo);
+            int ultimosEmpates = bllEquipo.EquipoVisitanteUltimosEmpates(equipo);
+            int visitanteAASi = bllEquipo.AmbosAnotanSi(equipo);
+            int ultimosAASi = bllEquipo.AmbosAnotanSiUltimos(equipo);
+            int visitanteAANo = bllEquipo.AmbosAnotanNo(equipo);
+            int ultimosAANo = bllEquipo.AmbosAnotanNoUltimos(equipo);
+            int v25GolesSi = bllEquipo.MasDeDosPuntoCincoGolesSi(equipo);
+            int ultimos25GolesSi = bllEquipo.MasDeDosPuntoCincoGolesSiUltimos(equipo);
+            int v25GolesNo = bllEquipo.MasDeDosPuntoCincoGolesNo(equipo);
+            int ultimos25GolesNo = bllEquipo.MasDeDosPuntoCincoGolesNoUltimos(equipo);
+
+            
             switch (indicadorLEV)
             {
                 case 1:
-                    textBoxVisitanteLEV.Text = (bllEquipo.EquipoVisitanteVictorias(equipo) + bllEquipo.EquipoVisitanteDerrotas(equipo)).ToString();
+                    textBoxVisitanteLEV.Text = (victorias + derrotas).ToString();
+                    textBoxVisitanteLEVUltimos.Text = (ultimasVictorias + ultimasDerrotas).ToString();
+
                     break;
                 case 2:
-                    textBoxVisitanteLEV.Text = (bllEquipo.EquipoVisitanteVictorias(equipo) + bllEquipo.EquipoVisitanteEmpates(equipo)).ToString();
+                    textBoxVisitanteLEV.Text = (victorias + empates).ToString();
+                    textBoxVisitanteLEVUltimos.Text = (ultimasVictorias + ultimosEmpates).ToString();
+
                     break;
                 case 3:
-                    textBoxVisitanteLEV.Text = (bllEquipo.EquipoVisitanteEmpates(equipo) + bllEquipo.EquipoVisitanteDerrotas(equipo)).ToString();
+                    textBoxVisitanteLEV.Text = (empates + derrotas).ToString();
+                    textBoxVisitanteLEVUltimos.Text = (ultimosEmpates + ultimasDerrotas).ToString();
+
                     break;
                 default:
                     // Código para ejecutar en caso de que no se cumpla ninguno de los casos anteriores
@@ -265,13 +310,25 @@ namespace _1XBet
 
             if (aASi > aANo)
             {
-                textBoxVisitanteAA.Text = bllEquipo.AmbosAnotanSi(equipo).ToString();
-                textBoxVisitante25Goles.Text = bllEquipo.MasDeDosPuntoCincoGolesSi(equipo).ToString();
+                textBoxVisitanteAA.Text = visitanteAASi.ToString();
+                textBoxVisitanteAAUltimos.Text = ultimosAASi.ToString();
             }
             else
             {
-                textBoxVisitanteAA.Text = bllEquipo.AmbosAnotanNo(equipo).ToString();
-                textBoxVisitante25Goles.Text = bllEquipo.MasDeDosPuntoCincoGolesNo(equipo).ToString();
+                textBoxVisitanteAA.Text = visitanteAANo.ToString();
+                textBoxVisitanteAAUltimos.Text = ultimosAANo.ToString();
+            }
+
+            if (dosPuntoCingoGolesSi > dosPuntoCingoGolesNo)
+            {
+                textBoxVisitante25Goles.Text = v25GolesSi.ToString();
+                textBoxVisitante25GolesUltimos.Text = ultimos25GolesSi.ToString();
+            }
+            else
+            {
+                textBoxVisitante25Goles.Text = v25GolesNo.ToString();
+                textBoxVisitante25GolesUltimos.Text = ultimos25GolesNo.ToString();
+
             }
         }
 

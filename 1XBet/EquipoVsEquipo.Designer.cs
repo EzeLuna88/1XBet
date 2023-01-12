@@ -51,14 +51,14 @@
             this.labelVisitante25Goles = new System.Windows.Forms.Label();
             this.labelVisitanteAA = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBoxLocalLEVUltimos = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxVisitante25GolesUltimos = new System.Windows.Forms.TextBox();
+            this.textBoxVisitanteAAUltimos = new System.Windows.Forms.TextBox();
+            this.textBoxVisitanteLEVUltimos = new System.Windows.Forms.TextBox();
+            this.textBoxLocal25GolesUltimos = new System.Windows.Forms.TextBox();
+            this.textBoxLocalLEVUltimos = new System.Windows.Forms.TextBox();
+            this.textBoxLocalAAUltimos = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -263,12 +263,12 @@
             // 
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.textBoxVisitante25GolesUltimos);
+            this.groupBox2.Controls.Add(this.textBoxVisitanteAAUltimos);
+            this.groupBox2.Controls.Add(this.textBoxVisitanteLEVUltimos);
+            this.groupBox2.Controls.Add(this.textBoxLocal25GolesUltimos);
             this.groupBox2.Controls.Add(this.textBoxLocalLEVUltimos);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.textBoxLocalAAUltimos);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.labelVisitante25Goles);
             this.groupBox2.Controls.Add(this.comboBoxEquipoLocal);
@@ -292,53 +292,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Total";
             // 
-            // textBox1
+            // label3
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(118, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(37, 20);
-            this.textBox1.TabIndex = 42;
-            // 
-            // textBoxLocalLEVUltimos
-            // 
-            this.textBoxLocalLEVUltimos.Enabled = false;
-            this.textBoxLocalLEVUltimos.Location = new System.Drawing.Point(118, 83);
-            this.textBoxLocalLEVUltimos.Name = "textBoxLocalLEVUltimos";
-            this.textBoxLocalLEVUltimos.Size = new System.Drawing.Size(37, 20);
-            this.textBoxLocalLEVUltimos.TabIndex = 40;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(118, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(37, 20);
-            this.textBox3.TabIndex = 41;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(321, 135);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(37, 20);
-            this.textBox4.TabIndex = 45;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(321, 109);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(37, 20);
-            this.textBox5.TabIndex = 44;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(321, 83);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(37, 20);
-            this.textBox6.TabIndex = 43;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(318, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "ult. 5 par.";
             // 
             // label2
             // 
@@ -350,15 +312,53 @@
             this.label2.TabIndex = 46;
             this.label2.Text = "ult. 5 par.";
             // 
-            // label3
+            // textBoxVisitante25GolesUltimos
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(318, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "ult. 5 par.";
+            this.textBoxVisitante25GolesUltimos.Enabled = false;
+            this.textBoxVisitante25GolesUltimos.Location = new System.Drawing.Point(321, 135);
+            this.textBoxVisitante25GolesUltimos.Name = "textBoxVisitante25GolesUltimos";
+            this.textBoxVisitante25GolesUltimos.Size = new System.Drawing.Size(37, 20);
+            this.textBoxVisitante25GolesUltimos.TabIndex = 45;
+            // 
+            // textBoxVisitanteAAUltimos
+            // 
+            this.textBoxVisitanteAAUltimos.Enabled = false;
+            this.textBoxVisitanteAAUltimos.Location = new System.Drawing.Point(321, 109);
+            this.textBoxVisitanteAAUltimos.Name = "textBoxVisitanteAAUltimos";
+            this.textBoxVisitanteAAUltimos.Size = new System.Drawing.Size(37, 20);
+            this.textBoxVisitanteAAUltimos.TabIndex = 44;
+            // 
+            // textBoxVisitanteLEVUltimos
+            // 
+            this.textBoxVisitanteLEVUltimos.Enabled = false;
+            this.textBoxVisitanteLEVUltimos.Location = new System.Drawing.Point(321, 83);
+            this.textBoxVisitanteLEVUltimos.Name = "textBoxVisitanteLEVUltimos";
+            this.textBoxVisitanteLEVUltimos.Size = new System.Drawing.Size(37, 20);
+            this.textBoxVisitanteLEVUltimos.TabIndex = 43;
+            // 
+            // textBoxLocal25GolesUltimos
+            // 
+            this.textBoxLocal25GolesUltimos.Enabled = false;
+            this.textBoxLocal25GolesUltimos.Location = new System.Drawing.Point(118, 135);
+            this.textBoxLocal25GolesUltimos.Name = "textBoxLocal25GolesUltimos";
+            this.textBoxLocal25GolesUltimos.Size = new System.Drawing.Size(37, 20);
+            this.textBoxLocal25GolesUltimos.TabIndex = 42;
+            // 
+            // textBoxLocalLEVUltimos
+            // 
+            this.textBoxLocalLEVUltimos.Enabled = false;
+            this.textBoxLocalLEVUltimos.Location = new System.Drawing.Point(118, 83);
+            this.textBoxLocalLEVUltimos.Name = "textBoxLocalLEVUltimos";
+            this.textBoxLocalLEVUltimos.Size = new System.Drawing.Size(37, 20);
+            this.textBoxLocalLEVUltimos.TabIndex = 40;
+            // 
+            // textBoxLocalAAUltimos
+            // 
+            this.textBoxLocalAAUltimos.Enabled = false;
+            this.textBoxLocalAAUltimos.Location = new System.Drawing.Point(118, 109);
+            this.textBoxLocalAAUltimos.Name = "textBoxLocalAAUltimos";
+            this.textBoxLocalAAUltimos.Size = new System.Drawing.Size(37, 20);
+            this.textBoxLocalAAUltimos.TabIndex = 41;
             // 
             // EquipoVsEquipo
             // 
@@ -407,11 +407,11 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxVisitante25GolesUltimos;
+        private System.Windows.Forms.TextBox textBoxVisitanteAAUltimos;
+        private System.Windows.Forms.TextBox textBoxVisitanteLEVUltimos;
+        private System.Windows.Forms.TextBox textBoxLocal25GolesUltimos;
         private System.Windows.Forms.TextBox textBoxLocalLEVUltimos;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxLocalAAUltimos;
     }
 }

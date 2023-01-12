@@ -113,7 +113,7 @@ namespace MPP
             try
             {
                 acceso = new Acceso();
-                string consulta = "Select Count (*) FROM partido WHERE Equipo_local = '" + equipo.Codigo + "' and Goles_local > Goles_visitante order by fecha DESC limit 5";
+                string consulta = "Select Count (*) FROM (SELECT TOP 5 * FROM partido ORDER BY fecha DESC) as subconsulta WHERE Equipo_local = '" + equipo.Codigo + "' and Goles_local > Goles_visitante";
                 return acceso.RetornarScalar(consulta);
             }
             catch (Exception)
@@ -141,7 +141,7 @@ namespace MPP
             try
             {
                 acceso = new Acceso();
-                string consulta = "Select Count (*) FROM partido WHERE Equipo_local = '" + equipo.Codigo + "' and Goles_local < Goles_visitante order by fecha DESC limit 5";
+                string consulta = "Select Count (*) FROM (SELECT TOP 5 * FROM partido ORDER BY fecha DESC) as subconsulta WHERE Equipo_local = '" + equipo.Codigo + "' and Goles_visitante > Goles_local";
                 return acceso.RetornarScalar(consulta);
             }
             catch (Exception)
@@ -169,7 +169,7 @@ namespace MPP
             try
             {
                 acceso = new Acceso();
-                string consulta = "Select Count (*) FROM partido WHERE Equipo_local = '" + equipo.Codigo + "' and Goles_local = Goles_visitante order by fecha DESC limit 5";
+                string consulta = "Select Count (*) FROM (SELECT TOP 5 * FROM partido ORDER BY fecha DESC) as subconsulta WHERE Equipo_local = '" + equipo.Codigo + "' and Goles_local = Goles_visitante";
                 return acceso.RetornarScalar(consulta);
             }
             catch (Exception)
@@ -183,7 +183,21 @@ namespace MPP
             try
             {
                 acceso = new Acceso();
-                string consulta = "Select Count (*) FROM partido WHERE Equipo_visitante = '" + equipo.Codigo + "' and Goles_local > Goles_visitante";
+                string consulta = "Select Count (*) FROM partido WHERE Equipo_visitante = '" + equipo.Codigo + "' and Goles_visitante > Goles_local";
+                return acceso.RetornarScalar(consulta);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public int EquipoVisitanteUltimasVictorias(BEEquipo equipo)
+        {
+            try
+            {
+                acceso = new Acceso();
+                string consulta = "Select Count (*) FROM (SELECT TOP 5 * FROM partido ORDER BY fecha DESC) as subconsulta WHERE Equipo_visitante = '" + equipo.Codigo + "' and Goles_visitante > Goles_local";
                 return acceso.RetornarScalar(consulta);
             }
             catch (Exception)
@@ -197,7 +211,21 @@ namespace MPP
             try
             {
                 acceso = new Acceso();
-                string consulta = "Select Count (*) FROM partido WHERE Equipo_visitante = '" + equipo.Codigo + "' and Goles_local < Goles_visitante";
+                string consulta = "Select Count (*) FROM partido WHERE Equipo_visitante = '" + equipo.Codigo + "' and Goles_visitante < Goles_local";
+                return acceso.RetornarScalar(consulta);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public int EquipoVisitanteUltimasDerrotas(BEEquipo equipo)
+        {
+            try
+            {
+                acceso = new Acceso();
+                string consulta = "Select Count (*) FROM (SELECT TOP 5 * FROM partido ORDER BY fecha DESC) as subconsulta WHERE Equipo_visitante = '" + equipo.Codigo + "' and Goles_local > Goles_visitante";
                 return acceso.RetornarScalar(consulta);
             }
             catch (Exception)
@@ -220,12 +248,41 @@ namespace MPP
             }
         }
 
+        public int EquipoVisitanteUltimosEmpates(BEEquipo equipo)
+        {
+            try
+            {
+                acceso = new Acceso();
+                string consulta = "Select Count (*) FROM (SELECT TOP 5 * FROM partido ORDER BY fecha DESC) as subconsulta WHERE Equipo_visitante = '" + equipo.Codigo + "' and Goles_local = Goles_visitante";
+                return acceso.RetornarScalar(consulta);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public int AmbosAnotanSi(BEEquipo equipo)
         {
             try
             {
                 acceso = new Acceso();
                 string consulta = "Select Count (*) FROM partido WHERE (Equipo_local = '" + equipo.Codigo + "' or Equipo_visitante = '" + equipo.Codigo + "') and (Goles_local > 0 and Goles_visitante > 0)";
+                return acceso.RetornarScalar(consulta);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
+        public int AmbosAnotanSiUltimos(BEEquipo equipo)
+        {
+            try
+            {
+                acceso = new Acceso();
+                string consulta = "Select Count (*) FROM (SELECT TOP 5 * FROM partido ORDER BY fecha DESC) WHERE (Equipo_local = '" + equipo.Codigo + "' or Equipo_visitante = '" + equipo.Codigo + "') and (Goles_local > 0 and Goles_visitante > 0)";
                 return acceso.RetornarScalar(consulta);
             }
             catch (Exception)
@@ -250,6 +307,21 @@ namespace MPP
 
         }
 
+        public int AmbosAnotanNoUltimos(BEEquipo equipo)
+        {
+            try
+            {
+                acceso = new Acceso();
+                string consulta = "Select Count (*) FROM (SELECT TOP 5 * FROM partido ORDER BY fecha DESC) WHERE (Equipo_local = '" + equipo.Codigo + "' or Equipo_visitante =  '" + equipo.Codigo + "') and not (Goles_local > 0 and Goles_visitante > 0)";
+                return acceso.RetornarScalar(consulta);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+
         public int MasDeDosPuntoCincoGolesSi(BEEquipo equipo)
         {
             try
@@ -264,12 +336,40 @@ namespace MPP
             }
         }
 
+        public int MasDeDosPuntoCincoGolesSiUltimos(BEEquipo equipo)
+        {
+            try
+            {
+                acceso = new Acceso();
+                string consulta = "Select Count (*) FROM (SELECT TOP 5 * FROM partido ORDER BY fecha DESC) WHERE (Equipo_local = '" + equipo.Codigo + "' or Equipo_visitante = '" + equipo.Codigo + "') and Goles_local + Goles_visitante > 2.5";
+                return acceso.RetornarScalar(consulta);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public int MasDeDosPuntoCincoGolesNo(BEEquipo equipo)
         {
             try
             {
                 acceso = new Acceso();
                 string consulta = "Select Count (*) FROM partido WHERE (Equipo_local = '" + equipo.Codigo + "' or Equipo_visitante = '" + equipo.Codigo + "') and Goles_local + Goles_visitante < 2.5";
+                return acceso.RetornarScalar(consulta);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public int MasDeDosPuntoCincoGolesNoUltimos(BEEquipo equipo)
+        {
+            try
+            {
+                acceso = new Acceso();
+                string consulta = "Select Count (*) FROM (SELECT TOP 5 * FROM partido ORDER BY fecha DESC) WHERE (Equipo_local = '" + equipo.Codigo + "' or Equipo_visitante = '" + equipo.Codigo + "') and Goles_local + Goles_visitante < 2.5";
                 return acceso.RetornarScalar(consulta);
             }
             catch (Exception)

@@ -101,5 +101,39 @@ namespace BLL
             return mppEquipo.EquipoLocalUltimosEmpates(beEquipo);
         }
 
+        public int AmbosAnotanSiUltimos (BEEquipo beEquipo)
+        {
+            return mppEquipo.AmbosAnotanSiUltimos(beEquipo);
+        }
+
+        public int AmbosAnotanNoUltimos(BEEquipo beEquipo)
+        {
+            return mppEquipo.AmbosAnotanNoUltimos(beEquipo);
+        }
+
+        public int MasDeDosPuntoCincoGolesSiUltimos(BEEquipo equipo)
+        {
+            return mppEquipo.MasDeDosPuntoCincoGolesSiUltimos(equipo);
+        }
+
+        public int MasDeDosPuntoCincoGolesNoUltimos(BEEquipo equipo)
+        {
+            return mppEquipo.MasDeDosPuntoCincoGolesNoUltimos(equipo);
+        }
+
+        public int EquipoVisitanteUltimasVictorias(BEEquipo beEquipo)
+        {
+            return mppEquipo.EquipoVisitanteUltimasVictorias(beEquipo);
+        }
+
+        public int EquipoVisitanteUltimasDerrotas(BEEquipo beEquipo)
+        {
+            return mppEquipo.EquipoVisitanteUltimasDerrotas(beEquipo);
+        }
+
+        public int EquipoVisitanteUltimosEmpates(BEEquipo beEquipo)
+        {
+            return mppEquipo.EquipoVisitanteUltimosEmpates(beEquipo);
+        }
     }
 }
