@@ -164,6 +164,30 @@ namespace MPP
 
         }
 
+        public DataSet ListarPartidosEquipo(BEEquipo beEquipo)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                acceso = new Acceso();
+                string consulta = "Select Jornada, e1.Equipo as Equipo_local, e2.Equipo as Equipo_visitante, Fecha, " +
+                    "Goles_local, Goles_visitante, Tarjeta_amarilla_local, Tarjeta_amarilla_visitante, " +
+                    "Tarjeta_roja_local, Tarjeta_roja_visitante, Saques_esquina_local, " +
+                    "Saques_esquina_visitante FROM Partido INNER JOIN Equipo AS e1 ON " +
+                    "Partido.Equipo_local = e1.Codigo INNER JOIN Equipo AS e2 ON Partido.Equipo_visitante = " +
+                    "e2.Codigo WHERE Partido.Codigo_liga = '" + beEquipo.Codigo + "' ORDER BY fecha DESC";
+                ds = acceso.Leer(consulta);
+
+                return ds;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
         public bool EquiposEnJornada(int jornada, BEEquipo beEquipoLocal, BEEquipo beEquipoVisitante)
         {
             try

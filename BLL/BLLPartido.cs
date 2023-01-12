@@ -43,6 +43,11 @@ namespace BLL
             return mppPartido.ListarPartidos(beLiga);
         }
 
+        public DataSet ListarPartidosEquipo (BEEquipo beEquipo)
+        {
+            return mppPartido.ListarPartidosEquipo(beEquipo);
+        }
+
         public bool EquiposEnJornada(int jornada, BEEquipo beEquipoLocal, BEEquipo beEquipoVisitante)
         {
             return mppPartido.EquiposEnJornada(jornada, beEquipoLocal, beEquipoVisitante);

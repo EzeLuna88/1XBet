@@ -257,6 +257,9 @@ namespace _1XBet
 
             }
 
+            dataGridViewPartidosLocal.DataSource = null;
+            dataGridViewPartidosLocal.DataSource = bllPartido.ListarPartidosEquipo(equipo);
+
         }
 
         private void comboBoxEquipoVisitante_SelectedIndexChanged(object sender, EventArgs e)
@@ -330,6 +333,9 @@ namespace _1XBet
                 textBoxVisitante25GolesUltimos.Text = ultimos25GolesNo.ToString();
 
             }
+
+            dataGridViewPartidosVisitante.DataSource = null;
+            dataGridViewPartidosVisitante.DataSource = bllPartido.ListarPartidosEquipo(equipo);
         }
 
        

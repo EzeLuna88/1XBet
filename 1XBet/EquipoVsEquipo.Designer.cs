@@ -59,8 +59,16 @@
             this.textBoxLocal25GolesUltimos = new System.Windows.Forms.TextBox();
             this.textBoxLocalLEVUltimos = new System.Windows.Forms.TextBox();
             this.textBoxLocalAAUltimos = new System.Windows.Forms.TextBox();
+            this.dataGridViewPartidosLocal = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewPartidosVisitante = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPartidosLocal)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPartidosVisitante)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxLiga
@@ -126,7 +134,7 @@
             this.groupBox1.Controls.Add(this.labelLev);
             this.groupBox1.Location = new System.Drawing.Point(14, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(359, 88);
+            this.groupBox1.Size = new System.Drawing.Size(359, 140);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             // 
@@ -285,7 +293,7 @@
             this.groupBox2.Controls.Add(this.textBoxLocalAA);
             this.groupBox2.Controls.Add(this.textBoxVisitanteLEV);
             this.groupBox2.Controls.Add(this.labelLocalAA);
-            this.groupBox2.Location = new System.Drawing.Point(14, 137);
+            this.groupBox2.Location = new System.Drawing.Point(379, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(378, 171);
             this.groupBox2.TabIndex = 40;
@@ -360,11 +368,51 @@
             this.textBoxLocalAAUltimos.Size = new System.Drawing.Size(37, 20);
             this.textBoxLocalAAUltimos.TabIndex = 41;
             // 
+            // dataGridViewPartidosLocal
+            // 
+            this.dataGridViewPartidosLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPartidosLocal.Location = new System.Drawing.Point(6, 28);
+            this.dataGridViewPartidosLocal.Name = "dataGridViewPartidosLocal";
+            this.dataGridViewPartidosLocal.Size = new System.Drawing.Size(347, 215);
+            this.dataGridViewPartidosLocal.TabIndex = 41;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dataGridViewPartidosLocal);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox3.Location = new System.Drawing.Point(14, 189);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(359, 249);
+            this.groupBox3.TabIndex = 42;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Equipo Local";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.dataGridViewPartidosVisitante);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
+            this.groupBox4.Location = new System.Drawing.Point(379, 189);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(359, 249);
+            this.groupBox4.TabIndex = 43;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Equipo Visitante";
+            // 
+            // dataGridViewPartidosVisitante
+            // 
+            this.dataGridViewPartidosVisitante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewPartidosVisitante.Location = new System.Drawing.Point(6, 28);
+            this.dataGridViewPartidosVisitante.Name = "dataGridViewPartidosVisitante";
+            this.dataGridViewPartidosVisitante.Size = new System.Drawing.Size(347, 215);
+            this.dataGridViewPartidosVisitante.TabIndex = 41;
+            // 
             // EquipoVsEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 450);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBoxLiga);
@@ -375,6 +423,10 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPartidosLocal)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPartidosVisitante)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,5 +465,9 @@
         private System.Windows.Forms.TextBox textBoxLocal25GolesUltimos;
         private System.Windows.Forms.TextBox textBoxLocalLEVUltimos;
         private System.Windows.Forms.TextBox textBoxLocalAAUltimos;
+        private System.Windows.Forms.DataGridView dataGridViewPartidosLocal;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataGridView dataGridViewPartidosVisitante;
     }
 }
