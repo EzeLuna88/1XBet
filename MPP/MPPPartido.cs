@@ -175,7 +175,7 @@ namespace MPP
                     "Tarjeta_roja_local, Tarjeta_roja_visitante, Saques_esquina_local, " +
                     "Saques_esquina_visitante FROM Partido INNER JOIN Equipo AS e1 ON " +
                     "Partido.Equipo_local = e1.Codigo INNER JOIN Equipo AS e2 ON Partido.Equipo_visitante = " +
-                    "e2.Codigo WHERE Partido.Codigo_liga = '" + beEquipo.Codigo + "' ORDER BY fecha DESC";
+                    "e2.Codigo WHERE (e1.Codigo = '" + beEquipo.Codigo + "' or e2.Codigo = '" + beEquipo.Codigo + "') ORDER BY fecha DESC";
                 ds = acceso.Leer(consulta);
 
                 return ds;
